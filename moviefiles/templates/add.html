@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+  <div class="row" style="width: 536px;">
+    <div class="col-md-12">
+      <div class="card" style="margin-top: 60px;">
+        <div class="card-body">
+          <div class="card-title">
+            <h1 style="font-family: cursive; text-align:center; background-color:palevioletred;color: white;">Add Movie</h1>
+            <form method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              <br>
+              <input type="text" name="name" placeholder="Enter movie name"><br><br>
+              <input type="text" name="desc" placeholder="Enter movie description"><br><br>
+              <input type="text" name="year" placeholder="Enter movie year"><br><br>
+              <input type="file" name="img"><br><br>
+              <input class="btn btn-success" type="submit">
+             </form>
+             <a href="{% url 'movieapp:index' %}"><button class="btn btn-secondary" style="margin-top:20px;">Cancel</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <div class="card" style="text-align: center;width: 800px;height: 145px; margin-top: 133px; margin-left: 118px;" >
+             <h3 class="card-title text-danger" style="margin-top:8px;">Delete</h3>
+          <form method="POST">
+            {% csrf_token %}
+            Are you srue that,do you want to delete the movie?
+            <input class="btn btn-warning" type="submit">
+           </form>
+           <a href="{% url 'movieapp:index' %}"><button class="btn btn-secondary">Cancel</button></a>
+      </div>
+   </div>
+</div>
+</div>
+{% endblock %}

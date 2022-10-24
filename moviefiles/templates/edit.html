@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row" style="margin-top:30px;">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body" style="margin-bottom: -13px;">
+                     <div class="card-title">
+                         <h1 class="text-success" style="text-align:center;">Updation</h1>
+                          <div class="matter" style="margin-left:45px;">
+                                <form method="POST" enctype="multipart/form-data" >
+                                    {% csrf_token %}
+                                    {{form.as_p}}
+                                    <input class="btn btn-info" style="margin-left: 225px;" type="submit">
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
